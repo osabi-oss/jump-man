@@ -18,7 +18,9 @@ function draw() {
    circle(x_positionplayer, 500, 25);
    if (keyIsDown(LEFT_ARROW))
     x_positionplayer-=2.00
-  for (let i = 0; i<10; i++) {
+  if (keyIsDown(RIGHT_ARROW))
+    x_positionplayer+=2.00
+  for (let i = 0; i<20; i++) {
     const y_position = obstacles[i].y_offset+offset
     const x_position = obstacles[i].x_offset
     rect(x_position,y_position,50,10)
@@ -29,4 +31,6 @@ function draw() {
   }
 offset +=1.67
 }
+
+
 
